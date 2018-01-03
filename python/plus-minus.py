@@ -37,3 +37,18 @@ Sample Output
 0.500000
 0.333333
 0.166667'''
+
+
+import sys
+
+def plusMinus(arr):
+    # Complete this function
+    print(round(len([x for x in arr if x > 0])/n, 6))
+    print(round(len([x for x in arr if x < 0])/n, 6))
+    print(round(len([x for x in arr if x == 0])/n, 6))
+
+
+if __name__ == "__main__":
+    n = int(input().strip())
+    arr = list(map(int, input().strip().split(' ')))
+    plusMinus(arr)
