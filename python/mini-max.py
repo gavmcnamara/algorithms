@@ -29,3 +29,18 @@ Sample Output
 10 14
 '''
 
+import sys
+
+def miniMaxSum(arr):
+    # complete this function
+    # x adds up all integers that are in arr
+    x = sum(arr)
+    # x-max(arr) will subtract the highest number
+    # from the sum of arr and x-min(arr)
+    # will print subtract the lowest number
+    # from the sim of arr
+    print(x-max(arr), x-min(arr))
+
+if __name__ == "__main__":
+    arr = list(map(int, input().strip().split(' ')))
+    miniMaxSum(arr)
