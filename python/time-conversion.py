@@ -25,3 +25,11 @@ Sample Output
 19:05:45
 '''
 
+import sys
+
+def timeConversion(s):
+    # Complete this function
+
+s = input().strip()
+result = timeConversion(s)
+print(result)
