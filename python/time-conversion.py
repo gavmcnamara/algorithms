@@ -26,8 +26,10 @@ Sample Output
 '''
 
 import sys
+from time import strptime, strftime
 
 def timeConversion(s):
+    return strftime("%H:%M:%S", strptime(s, "%I:%M:%S%p"))
     # Complete this function
 
 s = input().strip()
