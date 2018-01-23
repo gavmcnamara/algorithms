@@ -22,7 +22,9 @@ def question2(a):
 print(question2("racecar"))
 print(question2("dabbac"))
 
-
-
+'''Efficiency: O(n^2), this is because of the two for loops
+the first for loop is equal to O(n) and the second is
+equal to O(n). So combined it is O(n^2)
+'''
 
 
