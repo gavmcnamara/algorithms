@@ -36,4 +36,9 @@ The question1 function takes a for loop and iterates
 to see if t is a substring of s.
 There for the efficiency is O(n)
 
+Readability:
+The way I approached this problem was to use pythons sorted
+function to create two sorted lists. Then, create to arguments
+(s, t) to check if t is a substring of s. If this was true
+it would return boolean true and if not return false.
 '''
