@@ -24,3 +24,7 @@ def question1(s, t):
 
 print(question1("gavin", "vin"))
 print(question1("gavin", "asd"))
+
+'''
+Efficiency: O(n)
+'''
