@@ -27,4 +27,13 @@ print(question1("gavin", "asd"))
 
 '''
 Efficiency: O(n)
+
+Code design:
+The isAnagram function creates two sorted lists and returns
+them equal to eachother
+
+The question1 function takes a for loop and iterates
+to see if t is a substring of s.
+There for the efficiency is O(n)
+
 '''
