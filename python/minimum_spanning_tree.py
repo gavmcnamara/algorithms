@@ -32,3 +32,7 @@ def question3(G):
     start = G.keys()[0]
     # creates empty list to store dict graph G
     min_span_tree[start] = []
+
+    while len(min_span_tree.keys()) < len(vertex):
+        min_weight = float('inf')
+        min_edge = None
