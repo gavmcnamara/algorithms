@@ -15,18 +15,25 @@ and return an adjacency list structured like this:
 # The function definition should be question3(G)
 
 def question3(G):
+    # created for runtime errors
     if len(G) <= 1:
         return G
 
+    # checks to make sure G is a dictionary
     if type(G) != dict:
         print "Error: G is not a dictionary!"
 
+    # creates set of keys
     vertices = set(G.keys())
+    # empty dictionary
     min_span_tree = {}
+    # start point for G
     start = G.keys()[0]
+    # stores start point in list
     min_span_tree[start] = []
 
     while len(min_span_tree.keys()) < len(vertices):
+        # all other vertices are initialized to infinity
         min_weight = float('inf')
         min_edge = None
         for vertex in min_span_tree.keys():
