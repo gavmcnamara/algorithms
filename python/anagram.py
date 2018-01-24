@@ -1,7 +1,7 @@
 '''
  Given two strings s and t, determine whether some anagram
- of t is a substring of s. For example: if s = "palendrome"
- and t = "end", then the function returns True.
+ of t is a substring of s. For example: if s = "anagram"
+ and t = "gram", then the function returns True.
  Your function definition should look
  like: question1(s, t) and return a boolean True or False.
 
@@ -9,21 +9,27 @@
  '''
 
 def isAnagram(str1, str2):
-    # creates 2 lists and compares and returns sorted list
+    # creates two lists to store strings
     str1_list = sorted(str1)
     str2_list = sorted(str2)
+    # compares and returns the strings
     return (str1_list == str2_list)
 
 def question1(s, t):
+    # checks to see if t is an anagram of s
     for i in range(len(s)-len(t)+1):
-        # if t is a substring of s return True
         if isAnagram(s[i: i+len(t)], t):
             return True
     return False
 
-print(question1("palendrome", "end"))
-print(question1("gavin", "vin"))
-print(question1("gavin", "asd"))
+print question1("gavin", "vin")
+print question1("anagram", "gram")
+print question1("people", "oe")
+print question1("udacity", "ad")
+print question1("udacity", "citys")
+print question1("udacity", "ducaity")
+print question1("udacity", "ciy")
+print question1("udacity", " ")
 
 '''
 Efficiency: O(n)
