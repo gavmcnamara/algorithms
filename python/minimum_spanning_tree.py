@@ -19,5 +19,16 @@ def question3(G):
     if len(G) <= 1:
         return G
 
+    # checks to make sure G is a dictionary
+    # if not it will print error message
     if type(G) != dict:
         print "Error: G is not a dictionary!"
+
+    # returns list of all available keys in dictionary
+    vertex = G.keys()
+    # creates empty list
+    min_span_tree = {}
+    # starting point for G
+    start = G.keys()[0]
+    # creates empty list to store dict graph G
+    min_span_tree[start] = []
