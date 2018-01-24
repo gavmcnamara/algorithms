@@ -18,3 +18,6 @@ def question3(G):
     # if graph G is <= 1, there is no rumtime errors
     if len(G) <= 1:
         return G
+
+    if type(G) != dict:
+        print "Error: G is not a dictionary!"
