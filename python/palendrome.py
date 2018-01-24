@@ -2,28 +2,32 @@
 substring contained in a.
 '''
 
-def question2(a):
-    # if a is nothing there will be no runtime errors
+def palendrome(a):
+    # makes sure there is not runtime errors
     if a <= "":
         return a
 
-    # creates string that will contain longest palendrome
+    # empty string for long palendrome
     lng_palendrome = ""
     for i in range(len(a)):
         for x in range(i):
             substring = a[x: i+1]
-            # checks is substring contains a palendrome
+            # checks if there is a pandrome in string
             if substring == substring[::-1]:
                 if len(substring) > len(lng_palendrome):
                     lng_palendrome = substring
-
     if len(lng_palendrome) == 0:
         print a, "is not a palendrome!"
     return lng_palendrome
 
-print question2("racecar")
-print question2("baac")
-print question2("asdf")
+
+print(palendrome("racecar"))
+print(palendrome("abba"))
+print(palendrome(""))
+print(palendrome("dsfsdkjfabbaorejirv"))
+print(palendrome("ab"))
+
+
 '''Efficiency: O(n^2), this is because of the two for loops
 the first for loop is equal to O(n) and the second is
 equal to O(n). So combined it is O(n^2).
