@@ -15,26 +15,18 @@ and return an adjacency list structured like this:
 # The function definition should be question3(G)
 
 def question3(G):
-    # if graph G is <= 1, there is no rumtime errors
     if len(G) <= 1:
         return G
 
-    # checks to make sure G is a dictionary
-    # if not it will print error message
     if type(G) != dict:
         print "Error: G is not a dictionary!"
 
-    # returns list of all available keys in dictionary
     vertices = set(G.keys())
-    # creates empty list
     min_span_tree = {}
-    # creates starting point for dict G
     start = G.keys()[0]
-    # creates empty list to store dict graph G
     min_span_tree[start] = []
 
     while len(min_span_tree.keys()) < len(vertices):
-        # all other vertices are initialized to infinity
         min_weight = float('inf')
         min_edge = None
         for vertex in min_span_tree.keys():
@@ -64,3 +56,13 @@ print question3({'A': [('B', 2)],
 print question3({'A': []})
 
 print question3({})
+
+''' Efficiency: O(n*m) due to the fact of edges and
+vertices are each visited once in the while loop.
+Code design: I chose Prim's algorithm which at each step will
+choose the cheapest route to the next step. In this case,
+the cheapest next step is the edge with the lowest weight.
+I used a boolean array (min_span_tree) to represent the set of
+vertices included in the MST. If a value min_span_tree[v] is true,
+then vertex v is included in MST, otherwise not.
+'''
