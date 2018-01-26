@@ -9,14 +9,11 @@
  '''
 
 def isAnagram(str1, str2):
-    # creates two lists to store strings
     str1_list = sorted(str1)
     str2_list = sorted(str2)
-    # compares and returns the strings
     return (str1_list == str2_list)
 
 def question1(s, t):
-    # checks to see if t is an anagram of s
     for i in range(len(s)-len(t)+1):
         if isAnagram(s[i: i+len(t)], t):
             return True
