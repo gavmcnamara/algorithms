@@ -3,19 +3,16 @@ substring contained in a.
 '''
 
 def palendrome(a):
-    # makes sure there is not runtime errors
     if a <= "":
         return a
-
-    # empty string for long palendrome
     lng_palendrome = ""
     for i in range(len(a)):
         for x in range(i):
-            substring = a[x: i+1]
-            # checks if there is a pandrome in string
+            substring = a[x:i+1]
             if substring == substring[::-1]:
                 if len(substring) > len(lng_palendrome):
                     lng_palendrome = substring
+
     if len(lng_palendrome) == 0:
         print a, "is not a palendrome!"
     return lng_palendrome
